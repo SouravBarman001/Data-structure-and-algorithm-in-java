@@ -14,7 +14,9 @@ public class PrimeNumber {
 
     private static boolean checkPrime(int number) {
          boolean n = true;
-        for (int i = 2; i < number;i++){
+         int num = (int) Math.sqrt(number);
+     //   System.out.println(num);
+        for (int i = 2; i <= num;i++){
             if (number%i == 0){
                 n = false;
 
