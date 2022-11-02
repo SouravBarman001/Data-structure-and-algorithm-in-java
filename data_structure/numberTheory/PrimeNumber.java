@@ -25,12 +25,12 @@ public class PrimeNumber {
 
     private static boolean checkPrime(int number) {
          boolean n = true;
-         if (number < 2){n=true;}
-         if (number <= 3){n=true;}
+         if (number < 2){n=false;}
+
          if (number%2 == 0){n = false;}
          int num = (int) Math.sqrt(number);
      //   System.out.println(num);
-        for (int i = 3; i <= num;i++){
+        for (int i = 2; i <= num;i++){
             if (number%i == 0){
                 n = false;
 
