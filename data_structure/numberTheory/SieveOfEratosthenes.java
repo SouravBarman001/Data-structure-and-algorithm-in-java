@@ -38,9 +38,5 @@ public class SieveOfEratosthenes {
         System.out.println("");
         System.out.println("Count = "+count);
 
-
-
-
-
     }
 }
