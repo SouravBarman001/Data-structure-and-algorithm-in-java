@@ -7,7 +7,6 @@ public class SieveOfEratosthenes {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter array size:");
         int arrSize = sc.nextInt(); // 30
-
         sieveFunction(arrSize);
     }
 

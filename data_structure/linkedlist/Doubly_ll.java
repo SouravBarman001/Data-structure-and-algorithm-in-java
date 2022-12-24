@@ -28,9 +28,40 @@ public class Doubly_ll {
                 head = new_node;
                 tail = new_node;
             }else {
-                head.prev = new_node;
-                new_node.next = head;
-                head = new_node;
+
+                System.out.print("Insert at the begining, press 1:");
+                System.out.print("Insert at the end, press 2:");
+                System.out.print("Insert at specific location, press 3:");
+                System.out.println("");
+                m =sc.nextInt();
+                switch (m){
+                    case 1:
+                        new_node.next = head;
+                        head.prev = new_node;
+                        head = new_node;
+                        break;
+                    case 2:
+                     tail.next = new_node;
+                     new_node.prev = tail;
+                     tail = new_node;
+                         break;
+                    case 3:
+                        System.out.println("Enter position of the node:");
+                        p = sc.nextInt();
+                        Node temp1 = head;
+                        Node ptr = temp1.next;
+
+                        for (int i = 1;i<p-1;i++){
+                            temp1 = ptr;
+                           ptr = ptr.next;
+                        }
+                        new_node.prev = temp1;
+                        new_node.next = ptr;
+                        temp1.next = new_node;
+                        ptr.prev = new_node;
+                        break;
+                }
+
             }
             System.out.println("Do you want to add more data.If yes,press 1");
             n = sc.nextInt();
